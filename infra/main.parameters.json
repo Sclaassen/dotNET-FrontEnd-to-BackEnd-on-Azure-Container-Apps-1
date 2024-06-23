@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentName": {
+            "value": "${AZURE_ENV_NAME}"
+        },
+        "location": {
+            "value": "${AZURE_LOCATION}"
+        },
+        "storeAppExists": {
+            "value": "${SERVICE_STORE_RESOURCE_EXISTS=false}"
+        },
+        "inventoryAppExists": {
+            "value": "${SERVICE_INVENTORY_RESOURCE_EXISTS=false}"
+        },
+        "productsAppExists": {
+            "value": "${SERVICE_PRODUCTS_RESOURCE_EXISTS=false}"
+        }
+    }
+}
