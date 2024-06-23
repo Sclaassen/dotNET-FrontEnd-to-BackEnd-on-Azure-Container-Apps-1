@@ -8,7 +8,7 @@ on:
 env:
   
   # alphanumeric string under 14 characters
-  RESOURCE_GROUP_NAME: containerappsdvtmicrosftdept
+  RESOURCE_GROUP_NAME: msan-store-test-rg
 
 
   # specify your preferred region
