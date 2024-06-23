@@ -47,7 +47,7 @@ By the end of this section you'll have a 3-node app running in Azure. This setup
 
 ```bash
 $subscriptionId=$(az account show --query id --output tsv)
-az ad sp create-for-rbac --sdk-auth --name WebAndApiSample --role contributor --scopes /subscriptions/$subscriptionId
+az ad sp create-for-rbac --sdk-auth --name WebAndApiSample --role owner --scopes /subscriptions/$subscriptionId
 ```
 
 3. Copy the JSON written to the screen to your clipboard. 
@@ -70,6 +70,10 @@ az ad sp create-for-rbac --sdk-auth --name WebAndApiSample --role contributor --
 4. Create a new GitHub secret in your fork of this repository named `AzureSPN`. Paste the JSON returned from the Azure CLI into this new secret. Once you've done this you'll see the secret in your fork of the repository.
 
    ![The AzureSPN secret in GitHub](docs/media/secrets.png)
+
+5. Create a second GitHub secret in your fork of this repository named `AZURE_SUBSCRIPTION_ID`. Provide the specific Azure subscription you want to impact as the value for this secret. Ocne finished, the two secrets' names will show on the page. 
+
+   ![The AzureSPN and subscription id secrets in GitHub](docs/media/secrets2.png)
 
 > Note: Never save the JSON to disk, for it will enable anyone who obtains this JSON code to create or edit resources in your Azure subscription. 
 
